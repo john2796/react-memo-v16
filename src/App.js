@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Child from "./Child";
 
 class App extends Component {
   state = {
@@ -12,9 +13,13 @@ class App extends Component {
   }
 
   render() {
+    console.log("log app");
+
     return (
       <div className="App">
         <h1>Reactv16</h1>
+        {/* Rendering all the time Not good ! */}
+        <Child seconds={1} />
         {this.state.time.toString()}
       </div>
     );
